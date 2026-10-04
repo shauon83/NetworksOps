@@ -21,8 +21,12 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import ProxyHandler, Request, build_opener
 
-DEFAULT_URL = os.environ.get("IPTIME_URL", "http://192.168.0.1").rstrip("/")
-DEFAULT_TARGETS = ("SEandJH_geosil", "SEandJH_living")
+DEFAULT_URL = os.environ.get("IPTIME_URL", "http://YOUR_ROUTER_IP").rstrip("/")
+DEFAULT_TARGETS = tuple(
+    name.strip()
+    for name in os.environ.get("IPTIME_TARGETS", "agent-living,agent-room").split(",")
+    if name.strip()
+)
 
 
 def fetch_topology(base_url: str, timeout: int, cookie: str | None) -> dict[str, Any]:

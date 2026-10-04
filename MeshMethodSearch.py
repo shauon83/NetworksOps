@@ -3,7 +3,7 @@ import json
 import time
 import os
 
-IPTIME_URL = os.environ.get("IPTIME_URL", "http://192.168.0.1")
+IPTIME_URL = os.environ.get("IPTIME_URL", "http://YOUR_ROUTER_IP")
 # 실제 사용하는 관리자 아이디와 비밀번호는 환경변수로 설정하세요
 USERNAME = os.environ.get("IPTIME_ID", "")                 # 관리자 아이디
 PASSWORD = os.environ.get("IPTIME_PW", "")          # 관리자 비밀번호

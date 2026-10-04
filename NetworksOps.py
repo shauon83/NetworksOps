@@ -6,7 +6,7 @@ import os
 # ==========================================
 # 1. 사용자 설정 (환경변수 사용 - 하드코딩 금지)
 # ==========================================
-IPTIME_URL = os.environ.get("IPTIME_URL", "http://192.168.0.1")
+IPTIME_URL = os.environ.get("IPTIME_URL", "http://YOUR_ROUTER_IP")
 USERNAME = os.environ.get("IPTIME_ID", "")                 # 관리자 아이디
 PASSWORD = os.environ.get("IPTIME_PW", "")          # 관리자 비밀번호
 
